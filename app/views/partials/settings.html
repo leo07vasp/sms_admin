@@ -1,0 +1,83 @@
+<div data-ng-controller="SettingsController" class="settings">
+   <!-- this clikable element is required to go back to the sidebar menu items-->
+   <div class="p sidebar-close clickable">
+      <em data-ng-class="(app.layout.isRTL)? 'fa-angle-right' : 'fa-angle-left'" class="fa mr-lg"></em>
+      <span class="text-bold">Configurações</span>
+   </div>
+   <div class="settings-inner">
+      <div class="settings-content">
+         <div class="p">
+            <p class="text-muted text-thin">THEMES</p>
+            <div class="clearfix mb">
+               <div data-ng-repeat="theme in themes" class="pull-left wd-tiny mb">
+                  <div class="setting-color">
+                     <label>
+                        <input type="radio" name="setting-theme" data-ng-model="app.themeId" data-ng-value="$index" data-ng-change="setTheme($index)" />
+                        <span class="icon-check"></span>
+                        <ul class="list-table">
+                           <li data-ng-class="theme.sidebar"></li>
+                           <li data-ng-class="theme.brand"></li>
+                           <li data-ng-class="theme.topbar"></li>
+                        </ul>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr/>
+         <div class="p">
+            <p class="text-muted text-thin">LAYOUT</p>
+            <div class="clearfix">
+               <p class="pull-left">Fixed</p>
+               <div class="pull-right">
+                  <label class="switch switch-info">
+                     <input type="checkbox" data-ng-model="app.layout.isFixed" />
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+            <div class="clearfix">
+               <p class="pull-left">Boxed</p>
+               <div class="pull-right">
+                  <label class="switch switch-info">
+                     <input type="checkbox" data-ng-model="app.layout.isBoxed" />
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+            <div class="clearfix">
+               <p class="pull-left">RTL</p>
+               <div class="pull-right">
+                  <label class="switch switch-info">
+                     <input type="checkbox" data-ng-model="app.layout.isRTL" />
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+         </div>
+         <hr/>
+         <div class="p">
+            <p class="text-muted text-thin">SIDEBAR</p>
+            <div class="clearfix">
+               <p class="pull-left">Collapsed</p>
+               <div class="pull-right">
+                  <label class="switch switch-info">
+                     <input type="checkbox" data-ng-model="app.sidebar.isCollapsed" />
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+            <div class="clearfix">
+               <p class="pull-left">Slide</p>
+               <div class="pull-right">
+                  <label class="switch switch-info">
+                     <input type="checkbox" data-ng-model="app.sidebar.slide" />
+                     <span></span>
+                  </label>
+               </div>
+            </div>
+         </div>
+  
+      </div>
+   </div>
+</div>

@@ -1,0 +1,31 @@
+[
+  {
+    "text": "Main Navigation",
+    "type": "heading",
+    "translate": "sidebar.heading.HEADER"
+  },
+
+  {
+    "text": "Usuários",
+    "sref": "app.usuarios",
+    "icon": "icon-head"
+  },
+
+  {
+    "text": "Clientes",
+    "sref": "app.clientes",
+    "icon": "icon-mail"
+  },
+
+  {
+    "text": "Agendamentos",
+    "sref": "app.agendamentos",
+    "icon": "icon-clock"
+  },
+
+  {
+    "text": "Grupos",
+    "sref": "app.grupos",
+    "icon": "icon-share"
+  }
+]
